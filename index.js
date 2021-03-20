@@ -1,12 +1,12 @@
-import { execSync } from 'child_process'
-import { stringify } from 'querystring'
+const cp = require('child_process')
+const qs = require('querystring')
 
-export function get(url, queries, headers) {
+module.exports.get = function get(url, queries, headers) {
     //return if url is not given
     if (!url) return false
 
     //query string
-    var query_data = stringify(queries)
+    var query_data = qs.stringify(queries)
 
     //process header object into curl options
     var headers_data = ''
@@ -15,14 +15,15 @@ export function get(url, queries, headers) {
     }
 
     //run curl                  silent      headers        url      ? if query data       query data
-    var curl = execSync('curl -s ' + headers_data + url + (query_data ? '?' : '') + query_data)
+    var curl = cp.execSync('curl -s ' + headers_data + url + (query_data ? '?' : '') + query_data)
     if (curl) {
         return curl.toString()
     } else {
         return false
     }
 }
-export function post(url, data, headers) {
+
+module.exports.post = function post(url, data, headers) {
     //return if url or data is not given
     if (!url || !data) return false
 
@@ -36,16 +37,17 @@ export function post(url, data, headers) {
     }
 
     //run curl                  silent      headers        url      ? if query data       query data
-    var curl = execSync('curl -s -d ' + `'${data_data}'` + headers_data + url)
+    var curl = cp.execSync('curl -s -d ' + `'${data_data}'` + headers_data + url)
     if (curl) {
         return curl.toString()
     } else {
         return false
     }
 }
-export function direct(options) {
+
+module.exports.direct = function direct(options) {
     //run curl                  silent     options
-    var curl = execSync('curl -s ' + options)
+    var curl = cp.execSync('curl -s ' + options)
     if (curl) {
         return curl.toString()
     } else {

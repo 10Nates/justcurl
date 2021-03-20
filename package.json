@@ -5,7 +5,6 @@
   "main": "index.js",
   "author": "Nathan Hedge (https://multifunction.dev)",
   "license": "ISC",
-  "type": "module",
   "dependencies": {},
   "repository": {
     "type": "git",
