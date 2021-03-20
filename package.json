@@ -1,6 +1,6 @@
 {
   "name": "justcurl",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple interaction with the command line cURL interface. Allows for native synchronous low-latency connections.",
   "main": "index.js",
   "author": "Nathan Hedge (https://multifunction.dev)",
