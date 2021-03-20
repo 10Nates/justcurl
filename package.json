@@ -6,5 +6,23 @@
   "author": "Nathan Hedge (https://multifunction.dev)",
   "license": "ISC",
   "type": "module",
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10Nates/justcurl.git"
+  },
+  "keywords": [
+    "curl",
+    "request",
+    "http",
+    "https",
+    "get",
+    "post",
+    "sync",
+    "json"
+  ],
+  "bugs": {
+    "url": "https://github.com/10Nates/justcurl/issues"
+  },
+  "homepage": "https://github.com/10Nates/justcurl#readme"
 }

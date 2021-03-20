@@ -8,7 +8,7 @@
 &nbsp;
 [JustCurl](https://github.com/10nates/justcurl) is a wrapper for the command line cURL interface using child_process. It provides simple interaction with the command line cURL interface. 
 
-It also allows for native synchronous low-latency connections.
+It also allows for pure JS synchronous low-latency connections.
 
 ---
 ### Examples:
